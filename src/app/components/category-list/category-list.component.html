@@ -1,0 +1,33 @@
+<div class="category-container">
+  <h2 class="section-title retro-heading">Kategoriler</h2>
+  
+  <div class="filter-actions">
+    <button 
+      class="clear-filter-btn" 
+      (click)="clearFilter()"
+      [class.hidden]="!selectedCategoryId">
+      <mat-icon>close</mat-icon>
+      Filtreyi Temizle
+    </button>
+  </div>
+  
+  <div class="categories-grid">
+    <mat-card 
+      *ngFor="let category of categories" 
+      class="category-card retro-card"
+      [class.retro-card-hover]="true"
+      [class.selected]="selectedCategoryId === category.id"
+      (click)="selectCategory(category.id)">
+      <div class="retro-card-content">
+        <div class="retro-category-header">
+          <mat-icon class="retro-icon" [matBadge]="getItemCountForCategory(category.id)" matBadgeOverlap="true">{{category.icon}}</mat-icon>
+          <div class="retro-category-text">
+            <h3 class="retro-category-title">{{category.name}}</h3>
+            <p class="retro-category-subtitle">{{category.description}}</p>
+          </div>
+        </div>
+        <div class="retro-card-stripe"></div>
+      </div>
+    </mat-card>
+  </div>
+</div> 

@@ -1,0 +1,42 @@
+<div class="boycott-items-container">
+  <h2 class="section-title retro-heading" *ngIf="boycottItems.length > 0">Boycott Items ({{boycottItems.length}})</h2>
+  <p class="empty-message" *ngIf="boycottItems.length === 0">No boycott items found</p>
+  
+  <div class="boycott-items-grid">
+    <div 
+      *ngFor="let item of boycottItems" 
+      class="boycott-item-wrapper">
+      <div 
+        class="boycott-item retro-card"
+        [class.expanded]="isExpanded(item.id)"
+        (click)="toggleExpand(item.id)">
+        <div class="card-header">
+          <div class="retro-card-header">
+            <span class="retro-card-label">Company</span>
+            <div class="retro-card-badge">{{item.id}}</div>
+          </div>
+          <div class="retro-card-content">
+            <div class="company-info">
+              <img *ngIf="item.logoUrl" [src]="item.logoUrl" alt="Logo" class="company-logo">
+              <h3>{{item.companyName}}</h3>
+            </div>
+          </div>
+          <div class="retro-card-footer">
+            <button class="retro-expand-btn">
+              <mat-icon>{{ isExpanded(item.id) ? 'expand_less' : 'expand_more' }}</mat-icon>
+              {{ isExpanded(item.id) ? 'LESS' : 'MORE' }}
+            </button>
+          </div>
+        </div>
+        <div class="card-details" *ngIf="isExpanded(item.id)">
+          <div class="retro-card-header details-header">
+            <span class="retro-card-label">Hakkında</span>
+          </div>
+          <div class="retro-card-content">
+            <p>{{item.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
