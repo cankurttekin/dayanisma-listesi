@@ -12,7 +12,7 @@
         (click)="toggleExpand(item.id)">
         <div class="card-header">
           <div class="retro-card-header">
-            <span class="retro-card-label">Company</span>
+            <span class="retro-card-label">Şirket</span>
             <div class="retro-card-badge">{{item.id}}</div>
           </div>
           <div class="retro-card-content">
@@ -24,7 +24,7 @@
           <div class="retro-card-footer">
             <button class="retro-expand-btn">
               <mat-icon>{{ isExpanded(item.id) ? 'expand_less' : 'expand_more' }}</mat-icon>
-              {{ isExpanded(item.id) ? 'LESS' : 'MORE' }}
+              {{ isExpanded(item.id) ? 'KISA' : 'DETAY' }}
             </button>
           </div>
         </div>
