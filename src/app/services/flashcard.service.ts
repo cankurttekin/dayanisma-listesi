@@ -7,15 +7,16 @@ import { BoycottItem, Category } from '../models/flashcard.model';
 })
 export class BoycottService {
   private categories: Category[] = [
-    { id: '1', name: 'Otomotiv', description: 'Araba, lastik ve araç üreticileri', icon: 'directions_car' },
-    { id: '2', name: 'Medya', description: 'TV, radyo ve yayın kuruluşları', icon: 'tv' },
-    { id: '3', name: 'Turizm & Otelcilik', description: 'Otel zincirleri ve turistik işletmeler', icon: 'hotel' },
-    { id: '4', name: 'Perakende & Yemek', description: 'Restoranlar ve alışveriş markaları', icon: 'restaurant' },
-    { id: '5', name: 'İnşaat', description: 'İnşaat ve gayrimenkul şirketleri', icon: 'apartment' },
-    { id: '6', name: 'Holdingler', description: 'Çeşitli alanlarda faaliyet gösteren gruplar', icon: 'business' },
-    { id: '7', name: 'Eğitim', description: 'Eğitim kurumları', icon: 'school' },
-    { id: '8', name: 'Sağlık', description: 'Sağlık sektöründe faaliyet gösteren kuruluşlar', icon: 'local_hospital' },
-    { id: '9', name: 'Enerji (Yakit & LPG)', description: 'Enerji sektöründe faaliyet gösteren kuruluşlar', icon: 'local_gas_station' }
+    { id: '1', name: 'OTOMOTİV', description: 'Araba, lastik ve araç üreticileri', icon: 'directions_car' },
+    { id: '2', name: 'MEDYA', description: 'TV, radyo ve yayın kuruluşları', icon: 'tv' },
+    { id: '3', name: 'TURİZM & OTELCİLİK', description: 'Otel zincirleri ve turistik işletmeler', icon: 'hotel' },
+    { id: '4', name: 'PERAKENDE & YEMEK', description: 'Restoranlar ve alışveriş markaları', icon: 'restaurant' },
+    { id: '5', name: 'İNŞAAT', description: 'İnşaat ve gayrimenkul şirketleri', icon: 'apartment' },
+    { id: '6', name: 'HOLDİNGLER', description: 'Çeşitli alanlarda faaliyet gösteren gruplar', icon: 'business' },
+    { id: '7', name: 'EĞİTİM', description: 'Eğitim kurumları', icon: 'school' },
+    { id: '8', name: 'SAĞLIK', description: 'Sağlık sektöründe faaliyet gösteren kuruluşlar', icon: 'local_hospital' },
+    { id: '9', name: 'ENERJİ (YAKIT & LPG)', description: 'Enerji sektöründe faaliyet gösteren kuruluşlar', icon: 'local_gas_station' },
+    { id: '10', name: 'DİJİTAL SERVİSLER', description: 'Dijital servisler ve platformlar', icon: 'computer' }
   ];
 
   private boycottItems: BoycottItem[] = [
@@ -140,6 +141,13 @@ export class BoycottService {
       description: 'Doğuş Medya Grubu bünyesindeki radyo kanalı.', 
       categoryId: '2',
     },
+    { 
+      id: '89', 
+      companyName: 'DOD', 
+      description: 'Doğuş Otomotiv bünyesindeki ikinci el otomotiv satışı.', 
+      categoryId: '1',
+    },
+    
 
     // Demirören Grubu
     { 
@@ -563,6 +571,30 @@ export class BoycottService {
       companyName: 'Ihlas Havacılık Yakıt',
       description: 'Jet yakıtı ikmal hizmeti (İhlas’ın havacılık yakıt girişimi) İhlas Holding',
       categoryId: '9',
+    },
+    {
+      id: '90',
+      companyName: 'Zubizu',
+      description: 'Mobil yaşam stili ve sadakat uygulaması (restoran, alışveriş fırsatları) - Doğuş Holding',
+      categoryId: '10',
+    },
+    {
+      id: '91',
+      companyName: 'Zingat',
+      description: 'Online emlak ve gayrimenkul ilan platformu (web sitesi ve uygulama) - Doğuş Holding',
+      categoryId: '10',
+    },
+    {
+      id: '92',
+      companyName: 'Mobilet',
+      description: 'Etkinlik ve konser bileti satış platformu (mobil uygulama) - Doğuş Holding',
+      categoryId: '10',
+    },
+    {
+      id: '93',
+      companyName: 'Misli.com',
+      description: 'Online iddaa ve bahis platformu (spor müsabakaları ve at yarışı bahis) - Demirören Holding',
+      categoryId: '10',
     }
     
   ];
