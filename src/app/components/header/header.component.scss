@@ -1,0 +1,218 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--dark-blue);
+  border-bottom: 4px solid var(--red);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.retro-header {
+  background-image: 
+    linear-gradient(135deg, 
+    var(--dark-blue) 25%, 
+    #283569 25%, 
+    #283569 50%, 
+    var(--dark-blue) 50%, 
+    var(--dark-blue) 75%, 
+    #283569 75%, 
+    #283569 100%);
+  background-size: 40px 40px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  min-width: 180px;
+  position: relative;
+  z-index: 2;
+}
+
+.retro-logo {
+  display: flex;
+  align-items: center;
+  
+  .svg-icon {
+    margin-right: 12px;
+    filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.8));
+  }
+  
+  .retro-text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #000;
+    line-height: 1;
+  }
+  
+  .app-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.search-container {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+  
+  .retro-search {
+    width: 100%;
+    margin-top: 20px;
+    
+    ::ng-deep .mat-mdc-form-field-flex {
+      background-color: var(--white) !important;
+    }
+    
+    ::ng-deep .mat-mdc-text-field-wrapper {
+      border: 2px solid #000 !important;
+      box-shadow: 3px 3px 0 #000 !important;
+    }
+    
+    ::ng-deep .mat-mdc-form-field-label {
+      color: #333 !important;
+      font-family: 'Roboto', sans-serif !important;
+      font-weight: bold !important;
+    }
+    
+    ::ng-deep .mat-mdc-input-element {
+      color: #000 !important;
+      font-family: 'Roboto', sans-serif !important;
+    }
+    
+    ::ng-deep .mat-mdc-form-field-icon-suffix {
+      color: #e30a17 !important;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  
+  .retro-button {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    color: black;
+    border: 2px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    padding: 5px 10px;
+    
+    &:hover {
+      background-color: var(--red); 
+      color: white;
+      transform: translateY(2px);
+      box-shadow: 1px 1px 0 #000;
+      
+      mat-icon {
+        color: white;
+      }
+    }
+    
+    mat-icon {
+      color: #000 !important;
+      font-size: 24px;
+      height: 24px;
+      width: 24px;
+      display: block;
+    }
+    
+    .nav-label {
+      font-size: 12px;
+      margin-top: 4px;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-label {
+    display: none;
+  }
+  
+  .logo-container {
+    min-width: auto;
+    
+    .app-subtitle {
+      display: none;
+    }
+  }
+  
+  .search-container {
+    max-width: 300px;
+  }
+  
+  .actions {
+    .retro-button {
+      padding: 5px;
+      margin-left: 4px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    padding: 0 8px;
+    height: auto;
+    min-height: 70px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .logo-container {
+    width: auto;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    flex: 1;
+  }
+  
+  .retro-logo .app-title {
+    display: block;
+    font-size: 20px;
+  }
+  
+  .search-container {
+    display: none; /* We'll move search to the home component */
+  }
+  
+  .actions {
+    order: 2;
+    width: auto;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+} 

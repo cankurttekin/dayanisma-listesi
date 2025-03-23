@@ -1,1 +1,164 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+:root {
+  --red: #e30a17;
+  --white: #ffffff;
+  --dark-blue: #212d63;
+  --light-blue: #5c6bc0;
+  --yellow: #f9a825;
+  --green: #4caf50;
+  --orange: #ff9800;
+  --purple: #9c27b0;
+  --brown: #795548;
+  --gray: #607d8b;
+  --retro-teal: var(--light-blue);
+  --retro-yellow: var(--yellow);
+  --retro-orange: var(--orange);
+  --retro-pink: #ffccbc;
+  --retro-purple: var(--purple);
+  --retro-navy: var(--dark-blue);
+  --retro-mint: var(--green);
+  --retro-cream: var(--retro-cream);
+  --retro-red: var(--red);
+  --retro-light-blue: #e4f2fd;
+  --retro-light-yellow: #fff9e1;
+
+  /* Background patterns */
+  --diagonal-pattern: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.05),
+    rgba(0, 0, 0, 0.05) 10px,
+    rgba(0, 0, 0, 0) 10px,
+    rgba(0, 0, 0, 0) 20px
+  );
+  
+  --dot-pattern: radial-gradient(
+    circle at 1px 1px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 0
+  );
+  
+  /* Retro texture pattern */
+  --retro-texture: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 5v1H5v-1H1z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+html, body { 
+  height: 100%; 
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: var(--dark-blue);
+  background-image: 
+    var(--retro-texture),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 10px 10px, 20px 20px, 20px 20px;
+  color: var(--white);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  //pointer-events: none;
+  background: 
+    repeating-linear-gradient(
+      transparent, 
+      transparent 2px, 
+      rgba(255, 255, 255, 0.03) 3px, 
+      rgba(255, 255, 255, 0.03) 3px, 
+      transparent 5px
+    );
+  z-index: -1;
+  opacity: 0.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', 'Arial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.mat-mdc-card {
+  border-radius: 4px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--white) !important;
+}
+
+.mat-mdc-button, .mat-mdc-raised-button {
+  border-radius: 4px !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+}
+
+.mat-toolbar {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+}
+
+/* Protest banner effect */
+.activist-banner {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 8px 16px;
+  margin: 8px 0;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: rotate(-1deg);
+  display: inline-block;
+}
+
+/* Make headlines look like protest slogans */
+.slogan-text {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 5px 10px;
+  display: inline-block;
+  font-weight: bold;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
+/* Optimizations for mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}

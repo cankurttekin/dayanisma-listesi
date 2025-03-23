@@ -1,0 +1,45 @@
+<div class="boycott-items-container">
+  <h2 class="section-title retro-heading" *ngIf="boycottItems.length > 0">Boykot Listesi ({{boycottItems.length}})</h2>
+  <p class="empty-message" *ngIf="boycottItems.length === 0">Boykot bulunamadı</p>
+  
+  <div class="boycott-items-grid">
+    <div 
+      *ngFor="let item of boycottItems" 
+      class="boycott-item-wrapper">
+      <div 
+        class="boycott-item retro-card"
+        [class.expanded]="isExpanded(item.id)"
+        [style.background-color]="getCardColor(item.id)"
+        (click)="toggleExpand(item.id)">
+        <div class="card-header">
+          <div class="retro-card-header">
+            <span class="retro-card-label">{{ item.companyName }}</span>
+            <div class="retro-card-badge">{{item.id}}</div>
+          </div>
+          <div class="retro-card-content">
+            <div class="company-info">
+              <img *ngIf="item.logoUrl" [src]="item.logoUrl" alt="Logo" class="company-logo">
+              <div *ngIf="!item.logoUrl" class="company-initials-placeholder">
+                {{ getCompanyInitials(item.companyName) }}
+              </div>
+            </div>
+          </div>
+          <div class="retro-card-footer">
+            <button class="retro-expand-btn">
+              <mat-icon>{{ isExpanded(item.id) ? 'expand_less' : 'expand_more' }}</mat-icon>
+              {{ isExpanded(item.id) ? 'Kısa' : 'Detay' }}
+            </button>
+          </div>
+        </div>
+        <div class="card-details" *ngIf="isExpanded(item.id)" [style.background-color]="getCardColor(item.id)">
+          <div class="retro-card-header details-header">
+            <span class="retro-card-label">Hakkında</span>
+          </div>
+          <div class="retro-card-content">
+            <p>{{item.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
