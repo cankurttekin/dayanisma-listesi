@@ -30,7 +30,6 @@ import { MatIconModule } from '@angular/material/icon';
             <p>Bu uygulama, internette bulunan boykot listelerini tek bir yerde toplamak ve kullanıcıların şirketleri bulmalarına yardımcı olmak için oluşturulmuştur.</p>
             <p>Sitede bulunan bilgilerin doğruluğu kontrol edilmemiştir. Listedeki bilgilerin detaylari otomatik yontemlerle derlenmiştir ve guncelligi ve dogrulugu supheli olabilir.</p>
             <p>Sitede bulunan liste asagidaki kaynaklardan derlenmiştir.</p>
-            <p>Bu site bir görüş belirtmemekte ve boykot veya herhangi bir eylemi tesvik etmek amacıyla oluşturulmamıştır. Doğru bilgi için lütfen kaynakları kontrol ediniz.</p>
             <ul>
               <li><a href="https://eksisozluk.com/22-mart-2025-sirali-boykot-listesi--7956594">eksisozluk - 22 mart 2025 sıralı boykot listesi</a></li>
             </ul>
@@ -53,6 +52,16 @@ import { MatIconModule } from '@angular/material/icon';
               </ul>
               <p>Kaynak koduna erişim için: <a href="https://github.com/cankurttekin/dayanisma-listesi" target="_blank">GitHub Repo</a></p>
             </div>
+            <mat-divider></mat-divider>
+            <h3><mat-icon>warning</mat-icon> Sorumluluk Reddi ve İçerik Kaldırma veya Düzenleme</h3>
+            <ul>
+              <li>Bu site herhangi bir siyasi partiyi destelemek amaciyla olusturulmamistir. </li>
+              <li>Bu site bir görüş belirtmemektedir ve boykot, karalama veya herhangi bir eylemi tesvik etmeyi amaclamaz.
+              Halihazirda gundemde olan olaylar icin insanlarin sosyal mecralarda yayinladigi bilgileri ulasilabilir kilmaktan baska bir islev yerine getirmemektedir. </li>
+              <li>Verilen herhangi bir boykot karari bireyin kendi gorusu ve tercihidir.</li>
+              <li>Icerik kaldirmak veya duzenleme talebi icin yukaridaki github baglantisindan, 'issue' olarak talebi belirtebilir veya ayni github sayfasindan profilde yer alan iletisim bilgilerini kullanabilirsiniz.</li>
+            </ul>
+            <mat-divider></mat-divider>
           </mat-card-content>
         </mat-card>
       </div>

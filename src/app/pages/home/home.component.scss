@@ -86,7 +86,7 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
-  margin-top: 80px; /* Ensure content starts below the fixed header with search bar */
+  margin-top: 80px;
 }
 
 .sidebar {
@@ -164,13 +164,12 @@
     display: flex;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     border-top: none;
-    /* Make it flush with the header's bottom border */
-    margin-top: -4px; /* Offset the header's 4px bottom border */
+    margin-top: -4px;
   }
 
   .home-content {
     flex-direction: column;
-    margin-top: 120px; /* Adjusted to account for the flush toolbar */
+    margin-top: 120px;
   }
   
   .sidebar {
@@ -186,13 +185,12 @@
     transform: translateX(-100%);
     transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
     box-shadow: 5px 0 15px rgba(0, 0, 0, 0.7);
-    pointer-events: all !important; /* Ensure sidebar is clickable */
+    pointer-events: all !important; 
     
     &.mobile-visible {
       transform: translateX(0);
     }
     
-    /* Ensure all elements inside sidebar are clickable */
     app-category-list,
     .category-card,
     button,
@@ -204,7 +202,7 @@
 
 @media (max-width: 600px) {
   .home-content {
-    margin-top: 110px; /* Adjusted for smaller screens */
+    margin-top: 110px;
   }
   
   .mobile-search input {
@@ -212,8 +210,8 @@
   }
   
   .sidebar {
-    width: 85%; /* Slightly wider on phone screens */
-    padding-top: 120px; /* Adjusted to match new header + toolbar height */
+    width: 85%;
+    padding-top: 120px;
     &.mobile-visible {
       overflow-y: auto;
       max-height: 100vh;
@@ -221,11 +219,11 @@
   }
   
   .close-sidebar-btn {
-    top: 130px; /* Adjusted to match new sidebar padding */
+    top: 130px;
   }
   
   .mobile-toolbar {
-    top: 60px; /* Adjust to match the smaller header height on mobile */
+    top: 60px;
     padding: 8px 10px;
   }
 }
@@ -246,11 +244,11 @@
   }
   
   .home-content {
-    margin-top: 100px; /* Adjusted for extra small screens */
+    margin-top: 100px;
   }
   
   .close-sidebar-btn {
-    top: 110px; /* Adjusted for smaller screen size */
+    top: 110px;
     right: 10px;
   }
 }
