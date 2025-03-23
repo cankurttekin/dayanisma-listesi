@@ -30,17 +30,17 @@
 
 // Mobile toolbar for search only
 .mobile-toolbar {
-  display: none; /* Hidden by default on desktop */
+  display: none;
   position: fixed;
-  top: 70px; /* Align exactly with the bottom of the header */
+  top: 70px;
   left: 0;
   right: 0;
   background-color: var(--retro-purple, #9370DB);
   padding: 10px;
   z-index: 99;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  margin-top: 0; /* Ensure there's no gap */
-  border-top: none; /* Remove any potential border */
+  margin-top: 0;
+  border-top: none;
   margin-bottom: 0;
 }
 
@@ -95,8 +95,8 @@
   padding: 0 0 20px 0;
   background-color: rgba(255, 255, 255, 0.05);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-  position: relative; /* For absolute positioning of close button */
+  -webkit-overflow-scrolling: touch;
+  position: relative;
   
   /* Custom scrollbar */
   &::-webkit-scrollbar {
@@ -116,11 +116,11 @@
 /* Close button inside sidebar */
 .close-sidebar-btn {
   position: absolute;
-  top: 130px; /* Adjusted to match new sidebar padding-top */
+  top: 130px;
   right: 15px;
   z-index: 100;
   background-color: var(--retro-red, #ff4d4d);
-  color: white;
+  color: black;
   border: 2px solid white;
   border-radius: 50%;
   width: 40px;
@@ -177,10 +177,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 80%; /* Not 100% to make it feel more like a side menu */
+    width: 80%;
     height: 100%;
     margin-top: 0;
-    padding-top: 120px; /* Adjusted to match new header + toolbar height */
+    padding-top: 120px;
     z-index: 90;
     background-color: rgba(0, 0, 0, 0.95);
     transform: translateX(-100%);

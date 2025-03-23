@@ -12,7 +12,10 @@ export class BoycottService {
     { id: '3', name: 'Turizm & Otelcilik', description: 'Otel zincirleri ve turistik işletmeler', icon: 'hotel' },
     { id: '4', name: 'Perakende & Yemek', description: 'Restoranlar ve alışveriş markaları', icon: 'restaurant' },
     { id: '5', name: 'İnşaat', description: 'İnşaat ve gayrimenkul şirketleri', icon: 'apartment' },
-    { id: '6', name: 'Holdingler', description: 'Çeşitli alanlarda faaliyet gösteren gruplar', icon: 'business' }
+    { id: '6', name: 'Holdingler', description: 'Çeşitli alanlarda faaliyet gösteren gruplar', icon: 'business' },
+    { id: '7', name: 'Eğitim', description: 'Eğitim kurumları', icon: 'school' },
+    { id: '8', name: 'Sağlık', description: 'Sağlık sektöründe faaliyet gösteren kuruluşlar', icon: 'local_hospital' },
+    { id: '9', name: 'Enerji (Yakit & LPG)', description: 'Enerji sektöründe faaliyet gösteren kuruluşlar', icon: 'local_gas_station' }
   ];
 
   private boycottItems: BoycottItem[] = [
@@ -458,7 +461,110 @@ export class BoycottService {
       companyName: 'D&R', 
       description: 'Kitap, müzik ve elektronik ürünler satan perakende zinciri.', 
       categoryId: '4',
+    },
+    {
+      id: '72',
+      companyName: 'Ihlas Koleji',
+      description: 'Özel okul (K-12 eğitim; İhlas Eğitim Kurumları – kolej ve lise).',
+      categoryId: '7',
+    },
+    {
+      id: '73',
+      companyName: 'Hasan Kalyoncu Üniversitesi',
+      description: 'Vakıf üniversitesi (Gaziantep’te vakıf üniversitesi).',
+      categoryId: '7',
+    },
+    {
+      id: '74',
+      companyName: 'Erdem Koleji',
+      description: 'Özel okul (Gaziantep, Kalyon Vakfı bünyesinde K-12 okulları).',
+      categoryId: '7',
+    },
+    {
+      id: '75',
+      companyName: 'Ata Koleji (Ata Eğitim)',
+      description: 'Özel okul (İstanbul’da anaokulu-ilkokul-lise; Demirören ailesine ait).',
+      categoryId: '7',
+    },
+    {
+      id: '76',
+      companyName: 'Sakine Kalyoncu Ozel Egitim Okulu',
+      description: 'Özel eğitim uygulama okulu (engelli çocuklar için; İstanbul).',
+      categoryId: '7',
+    },
+    {
+      id: '77',
+      companyName: 'NUN Okulları',
+      description: 'Özel uluslararası okul (İstanbul, Albayrak ailesinin eğitim vakfı).',
+      categoryId: '7',
+    },
+    {
+      id: '78',
+      companyName: 'Enver Oren Anadolu Lisesi',
+      description: 'Özel Anadolu lisesi (İstanbul; İhlas Holding kurucusu adına)',
+      categoryId: '7',
+    },
+    {
+      id: '79',
+      companyName: 'Türkiye Hastanesi',
+      description: 'Özel genel hastane (İstanbul-Şişli’de tam teşekküllü hastane).',
+      categoryId: '8',
+    },
+    {
+      id: '80',
+      companyName: 'İhlas Hayat Hastanesi',
+      description: 'Özel tıp merkezi (İhlas’ın sağlık kuruluşu, poliklinik hizmetleri).',
+      categoryId: '8',
+    },
+    {
+      id: '81',
+      companyName: 'Demirören Tıp Merkezi',
+      description: 'Özel poliklinik (Demirören Grubu bünyesinde sağlık merkezi).',
+      categoryId: '8',
+    },
+    {
+      id: '82',
+      companyName: 'Milangaz',
+      description: 'LPG dağıtım markası (Türkiye genelinde %9 pazar payı) Demirören Holding',
+      categoryId: '9',
+    },
+    {
+      id: '83',
+      companyName: 'Likidgaz',
+      description: 'LPG markası (Milangaz bünyesinde alt marka) Demirören Holding',
+      categoryId: '9',
+    },
+    {
+      id: '84',
+      companyName: 'Mutfakgaz',
+      description: 'LPG markası (mutfak tüpü, evsel LPG) Demirören Holding',
+      categoryId: '9',
+    },
+    {
+      id: '85',
+      companyName: 'Güneşgaz',
+      description: 'LPG markası (LPG tüp dağıtımı) Demirören Holding',
+      categoryId: '9',
+    },
+    {
+      id: '86',
+      companyName: 'Türkpetrol',
+      description: 'Akaryakıt istasyon zinciri markası (86 yıllık yerli akaryakıt markası) Demirören Holding',
+      categoryId: '9',
+    },
+    {
+      id: '87',
+      companyName: 'Kalyon PV',
+      description: 'Güneş enerjisi paneli üretim markası (Konya Karapınar fabrikası, panel ve hücre satışı) Kalyon Holding',
+      categoryId: '9',
+    },
+    {
+      id: '88',
+      companyName: 'Ihlas Havacılık Yakıt',
+      description: 'Jet yakıtı ikmal hizmeti (İhlas’ın havacılık yakıt girişimi) İhlas Holding',
+      categoryId: '9',
     }
+    
   ];
 
   constructor() {

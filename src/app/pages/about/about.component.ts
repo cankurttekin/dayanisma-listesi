@@ -28,7 +28,9 @@ import { MatIconModule } from '@angular/material/icon';
           </mat-card-header>
           <mat-card-content>
             <p>Bu uygulama, internette bulunan boykot listelerini tek bir yerde toplamak ve kullanıcıların şirketleri bulmalarına yardımcı olmak için oluşturulmuştur.</p>
-            <p>Sitede bulunan liste bu kaynaklardan derlenmiştir. Bu site bir görüş belirtmemekte ve boykot veya herhangi bir eylemi tesvik etmek amacıyla oluşturulmamıştır. Doğru bilgi için lütfen kaynakları kontrol ediniz.</p>
+            <p>Sitede bulunan bilgilerin doğruluğu kontrol edilmemiştir. Listedeki bilgilerin detaylari otomatik yontemlerle derlenmiştir ve guncelligi ve dogrulugu supheli olabilir.</p>
+            <p>Sitede bulunan liste asagidaki kaynaklardan derlenmiştir.</p>
+            <p>Bu site bir görüş belirtmemekte ve boykot veya herhangi bir eylemi tesvik etmek amacıyla oluşturulmamıştır. Doğru bilgi için lütfen kaynakları kontrol ediniz.</p>
             <ul>
               <li><a href="https://eksisozluk.com/22-mart-2025-sirali-boykot-listesi--7956594">eksisozluk - 22 mart 2025 sıralı boykot listesi</a></li>
             </ul>
@@ -49,7 +51,7 @@ import { MatIconModule } from '@angular/material/icon';
                 <li>Değiştirilmiş sürümler de dahil olmak üzere uygulamayı yeniden dağıtma özgürlüğü</li>
                 <li>Uygulamayı geliştirme ve geliştirmelerinizi kamuya açma özgürlüğü</li>
               </ul>
-              <p>Kaynak koduna erişim için: <a href="https://github.com/cankurttekin/boycott" target="_blank">GitHub Repo</a></p>
+              <p>Kaynak koduna erişim için: <a href="https://github.com/cankurttekin/dayanisma-listesi" target="_blank">GitHub Repo</a></p>
             </div>
           </mat-card-content>
         </mat-card>
