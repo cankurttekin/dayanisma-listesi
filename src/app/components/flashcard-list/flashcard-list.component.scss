@@ -26,7 +26,7 @@
   font-style: italic;
   text-align: center;
   margin: 40px 0;
-  font-family: 'Courier New', monospace;
+  font-family: var(--monospace-font);
   border: 3px dashed var(--retro-orange);
   padding: 20px;
   background-color: var(--retro-yellow);
@@ -106,7 +106,7 @@
 }
 
 .retro-card-label {
-  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-family: var(--heading-font);
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -116,7 +116,7 @@
 .retro-card-badge {
   background-color: white;
   color: #000;
-  font-family: 'Courier New', monospace;
+  font-family: var(--monospace-font);
   font-weight: bold;
   padding: 2px 8px;
   border: 2px solid #000;
@@ -132,7 +132,7 @@
   align-items: center;
   text-align: center;
   font-size: 18px;
-  font-family: 'Courier New', monospace;
+  font-family: var(--monospace-font);
   overflow: auto;
   
   p {
@@ -151,7 +151,7 @@
 }
 
 .retro-flip-btn {
-  font-family: 'Courier New', monospace;
+  font-family: var(--monospace-font);
   font-weight: bold;
   font-size: 14px;
   background-color: var(--retro-orange);

@@ -32,13 +32,16 @@
 .mobile-toolbar {
   display: none; /* Hidden by default on desktop */
   position: fixed;
-  top: 70px;
+  top: 70px; /* Align exactly with the bottom of the header */
   left: 0;
   right: 0;
   background-color: var(--retro-purple, #9370DB);
   padding: 10px;
   z-index: 99;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  margin-top: 0; /* Ensure there's no gap */
+  border-top: none; /* Remove any potential border */
+  margin-bottom: 0;
 }
 
 .mobile-search {
@@ -52,10 +55,11 @@
     border: 2px solid #000;
     border-right: none;
     background-color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--primary-font);
     font-size: 16px;
     color: #000;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+    margin: 0;
   }
   
   button {
@@ -68,6 +72,7 @@
     justify-content: center;
     cursor: pointer;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+    margin: 0;
     
     &:hover {
       background-color: var(--retro-orange);
@@ -111,7 +116,7 @@
 /* Close button inside sidebar */
 .close-sidebar-btn {
   position: absolute;
-  top: 180px;
+  top: 130px; /* Adjusted to match new sidebar padding-top */
   right: 15px;
   z-index: 100;
   background-color: var(--retro-red, #ff4d4d);
@@ -157,11 +162,15 @@
 @media (max-width: 768px) {
   .mobile-toolbar {
     display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border-top: none;
+    /* Make it flush with the header's bottom border */
+    margin-top: -4px; /* Offset the header's 4px bottom border */
   }
 
   .home-content {
     flex-direction: column;
-    margin-top: 125px; /* Account for header + smaller toolbar */
+    margin-top: 120px; /* Adjusted to account for the flush toolbar */
   }
   
   .sidebar {
@@ -171,7 +180,7 @@
     width: 80%; /* Not 100% to make it feel more like a side menu */
     height: 100%;
     margin-top: 0;
-    padding-top: 130px;
+    padding-top: 120px; /* Adjusted to match new header + toolbar height */
     z-index: 90;
     background-color: rgba(0, 0, 0, 0.95);
     transform: translateX(-100%);
@@ -195,7 +204,7 @@
 
 @media (max-width: 600px) {
   .home-content {
-    margin-top: 140px; /* Account for smaller toolbar on small screens */
+    margin-top: 110px; /* Adjusted for smaller screens */
   }
   
   .mobile-search input {
@@ -204,7 +213,7 @@
   
   .sidebar {
     width: 85%; /* Slightly wider on phone screens */
-    padding-top: 140px; /* Reduced to match new header height */
+    padding-top: 120px; /* Adjusted to match new header + toolbar height */
     &.mobile-visible {
       overflow-y: auto;
       max-height: 100vh;
@@ -212,14 +221,19 @@
   }
   
   .close-sidebar-btn {
-    top: 150px;
+    top: 130px; /* Adjusted to match new sidebar padding */
+  }
+  
+  .mobile-toolbar {
+    top: 60px; /* Adjust to match the smaller header height on mobile */
+    padding: 8px 10px;
   }
 }
 
 /* For extra small devices */
 @media (max-width: 375px) {
   .mobile-toolbar {
-    padding: 8px;
+    padding: 6px 8px;
   }
   
   .mobile-search input,
@@ -232,11 +246,11 @@
   }
   
   .home-content {
-    margin-top: 130px;
+    margin-top: 100px; /* Adjusted for extra small screens */
   }
   
   .close-sidebar-btn {
-    top: 140px;
+    top: 110px; /* Adjusted for smaller screen size */
     right: 10px;
   }
 }

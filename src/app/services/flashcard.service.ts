@@ -6,7 +6,6 @@ import { BoycottItem, Category } from '../models/flashcard.model';
   providedIn: 'root'
 })
 export class BoycottService {
-  // Mock data
   private categories: Category[] = [
     { id: '1', name: 'Otomotiv', description: 'Araba, lastik ve araç üreticileri', icon: 'directions_car' },
     { id: '2', name: 'Medya', description: 'TV, radyo ve yayın kuruluşları', icon: 'tv' },

@@ -24,18 +24,33 @@ import { MatIconModule } from '@angular/material/icon';
       <div class="content-container">
         <mat-card class="about-card">
           <mat-card-header>
-            <mat-card-title>About Boycott App</mat-card-title>
+            <mat-card-title>Dayanışma Listesi Hakkında</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <p>This application was created to help users identify and boycott companies based on their values and ethics.</p>
-            <p>Simply browse the categories or search for specific companies to get detailed information.</p>
-            <mat-divider></mat-divider>
-            <h3><mat-icon>info</mat-icon> How to Use</h3>
+            <p>Bu uygulama, internette bulunan boykot listelerini tek bir yerde toplamak ve kullanıcıların şirketleri bulmalarına yardımcı olmak için oluşturulmuştur.</p>
+            <p>Sitede bulunan liste bu kaynaklardan derlenmiştir. Bu site bir görüş belirtmemekte ve boykot veya herhangi bir eylemi tesvik etmek amacıyla oluşturulmamıştır. Doğru bilgi için lütfen kaynakları kontrol ediniz.</p>
             <ul>
-              <li>Browse by category to see companies grouped by industry</li>
-              <li>Use the search function to find specific companies</li>
-              <li>Click on company cards to see detailed information about why they are on the boycott list</li>
+              <li><a href="https://eksisozluk.com/22-mart-2025-sirali-boykot-listesi--7956594">eksisozluk - 22 mart 2025 sıralı boykot listesi</a></li>
             </ul>
+            <mat-divider></mat-divider>
+            <h3><mat-icon>info</mat-icon> Nasıl Kullanılır</h3>
+            <ul>
+              <li>Kategorileri taramak veya belirli şirketleri aramak için arama yapın.</li>
+              <li>Şirket kartlarına tıklayarak daha fazla bilgi alın.</li>
+            </ul>
+            <mat-divider></mat-divider>
+            <h3><mat-icon>copyright</mat-icon> Lisans Bilgisi</h3>
+            <div class="license-info">
+              <p>Bu uygulama <strong>GNU Genel Kamu Lisansı (GPL) v3</strong> altında dağıtılmaktadır.</p>
+              <p>GPL, kullanıcılara aşağıdaki özgürlükleri sağlar:</p>
+              <ul>
+                <li>Uygulamayı herhangi bir amaç için çalıştırma özgürlüğü</li>
+                <li>Uygulamanın nasıl çalıştığını inceleme ve ihtiyaçlarınıza göre değiştirme özgürlüğü</li>
+                <li>Değiştirilmiş sürümler de dahil olmak üzere uygulamayı yeniden dağıtma özgürlüğü</li>
+                <li>Uygulamayı geliştirme ve geliştirmelerinizi kamuya açma özgürlüğü</li>
+              </ul>
+              <p>Kaynak koduna erişim için: <a href="https://github.com/cankurttekin/boycott" target="_blank">GitHub Repo</a></p>
+            </div>
           </mat-card-content>
         </mat-card>
       </div>
@@ -46,15 +61,16 @@ import { MatIconModule } from '@angular/material/icon';
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      background-color: #f5f5f5;
+      background-color: var(--white);
     }
     
     .content-container {
       flex: 1;
       padding: 20px;
-      background-color: #f5f5f5;
+      background-color: var(--white);
       background-image: var(--diagonal-pattern);
       background-size: 20px 20px;
+      margin-top: 70px;
     }
     
     .about-card {
@@ -64,13 +80,14 @@ import { MatIconModule } from '@angular/material/icon';
       border: 3px solid #000;
       border-radius: 0 !important;
       box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5) !important;
-      background-color: var(--retro-mint) !important;
+      background-color: var(--retro-orange) !important;
     }
     
     mat-card-title {
       font-size: 24px;
       margin-bottom: 16px;
-      font-family: 'Impact', 'Arial Black', sans-serif;
+      font-family: var(--heading-font);
+      font-weight: 900;
       color: var(--retro-navy);
       text-transform: uppercase;
       letter-spacing: 1px;
@@ -86,18 +103,32 @@ import { MatIconModule } from '@angular/material/icon';
       align-items: center;
       gap: 8px;
       margin-bottom: 16px;
-      font-family: 'Impact', 'Arial Black', sans-serif;
+      font-family: var(--heading-font);
+      font-weight: 900;
       color: var(--retro-navy);
     }
     
     ul {
       margin-left: 20px;
-      font-family: 'Courier New', monospace;
+      font-family: var(--primary-font);
     }
 
     p {
-      font-family: 'Courier New', monospace;
+      font-family: var(--primary-font);
       line-height: 1.5;
+    }
+
+    .license-info {
+      background-color: rgba(255, 255, 255, 0.3);
+      padding: 15px;
+      border-left: 4px solid var(--retro-navy);
+      margin-top: 10px;
+    }
+
+    .license-info a {
+      color: var(--retro-navy);
+      font-weight: bold;
+      text-decoration: underline;
     }
   `]
 })

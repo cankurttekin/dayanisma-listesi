@@ -41,6 +41,7 @@
   display: flex;
   align-items: center;
   min-width: 180px;
+  max-width: 50%;
   position: relative;
   z-index: 2;
 }
@@ -51,7 +52,11 @@
   
   .svg-icon {
     margin-right: 12px;
-    filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.8));
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.8));
+    
+    svg {
+      filter: drop-shadow(0 0 5px rgba(227, 10, 23, 0.5));
+    }
   }
   
   .retro-text-container {
@@ -60,16 +65,18 @@
   }
   
   .app-title {
+    font-family: var(--heading-font);
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 900;
     color: #fff;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     text-shadow: 2px 2px 0 #000;
     line-height: 1;
   }
   
   .app-subtitle {
+    font-family: var(--primary-font);
     font-size: 16px;
     font-weight: 400;
     color: var(--white);
@@ -99,13 +106,13 @@
     
     ::ng-deep .mat-mdc-form-field-label {
       color: #333 !important;
-      font-family: 'Roboto', sans-serif !important;
+      font-family: var(--primary-font) !important;
       font-weight: bold !important;
     }
     
     ::ng-deep .mat-mdc-input-element {
       color: #000 !important;
-      font-family: 'Roboto', sans-serif !important;
+      font-family: var(--primary-font) !important;
     }
     
     ::ng-deep .mat-mdc-form-field-icon-suffix {
@@ -151,6 +158,7 @@
     }
     
     .nav-label {
+      font-family: var(--primary-font);
       font-size: 12px;
       margin-top: 4px;
       font-weight: bold;
@@ -166,10 +174,7 @@
   
   .logo-container {
     min-width: auto;
-    
-    .app-subtitle {
-      display: none;
-    }
+    max-width: 60%;
   }
   
   .search-container {
@@ -187,17 +192,19 @@
 @media (max-width: 600px) {
   .app-header {
     padding: 0 8px;
-    height: auto;
-    min-height: 70px;
-    flex-wrap: wrap;
+    height: 60px;
+    min-height: 60px;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
   }
   
   .logo-container {
     width: auto;
+    max-width: 65%;
     justify-content: flex-start;
     margin-bottom: 0;
-    flex: 1;
+    flex: 0 1 auto;
   }
   
   .retro-logo .app-title {
@@ -205,14 +212,51 @@
     font-size: 20px;
   }
   
+  .retro-logo .app-subtitle {
+    display: block;
+    font-size: 14px;
+  }
+  
   .search-container {
-    display: none; /* We'll move search to the home component */
+    display: none;
   }
   
   .actions {
     order: 2;
     width: auto;
+    display: flex;
+    align-items: center;
     justify-content: flex-end;
     margin-bottom: 0;
+    flex: 0 0 auto;
+    
+    .retro-button {
+      margin-left: 3px;
+      min-width: 32px;
+      min-height: 32px;
+      padding: 5px;
+      
+      mat-icon {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .retro-logo .app-title {
+    font-size: 18px;
+    letter-spacing: 1.5px;
+  }
+  
+  .actions .retro-button {
+    padding: 4px;
+    margin-left: 2px;
+  }
+  
+  .actions .retro-button mat-icon {
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
   }
 } 

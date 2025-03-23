@@ -1,10 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
+/* Font declarations for GNU FreeFont */
+@font-face {
+  font-family: 'FreeSans';
+  src: url('./assets/freefont-20120503/FreeSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  src: url('./assets/freefont-20120503/FreeSansBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  src: url('./assets/freefont-20120503/FreeSansOblique.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FreeSans';
+  src: url('./assets/freefont-20120503/FreeSansBoldOblique.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FreeSerif';
+  src: url('./assets/freefont-20120503/FreeSerif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeSerif';
+  src: url('./assets/freefont-20120503/FreeSerifBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeSerif';
+  src: url('./assets/freefont-20120503/FreeSerifItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FreeSerif';
+  src: url('./assets/freefont-20120503/FreeSerifBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FreeMono';
+  src: url('./assets/freefont-20120503/FreeMono.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeMono';
+  src: url('./assets/freefont-20120503/FreeMonoBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FreeMono';
+  src: url('./assets/freefont-20120503/FreeMonoOblique.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FreeMono';
+  src: url('./assets/freefont-20120503/FreeMonoBoldOblique.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
 :root {
   --red: #e30a17;
   --white: #ffffff;
   --dark-blue: #212d63;
+  --red-dark: #881f2d;
   --light-blue: #5c6bc0;
   --yellow: #f9a825;
   --green: #4caf50;
@@ -23,6 +109,11 @@
   --retro-red: var(--red);
   --retro-light-blue: #e4f2fd;
   --retro-light-yellow: #fff9e1;
+
+  /* Font family variables */
+  --primary-font: 'FreeSans', sans-serif;
+  --heading-font: 'FreeSans', sans-serif;
+  --monospace-font: 'FreeMono', monospace;
 
   /* Background patterns */
   --diagonal-pattern: repeating-linear-gradient(
@@ -46,7 +137,7 @@
 html, body { 
   height: 100%; 
   margin: 0;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: var(--primary-font);
   background-color: var(--dark-blue);
   background-image: 
     var(--retro-texture),
@@ -78,9 +169,9 @@ body::before {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Condensed', 'Arial', sans-serif;
+  font-family: var(--heading-font);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   font-weight: 700;
   color: var(--white);
 }
@@ -95,19 +186,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .mat-mdc-button, .mat-mdc-raised-button {
   border-radius: 4px !important;
-  font-family: 'Roboto', sans-serif !important;
+  font-family: var(--primary-font) !important;
   font-weight: 500 !important;
   letter-spacing: 0.5px !important;
   text-transform: uppercase !important;
 }
 
 .mat-toolbar {
-  font-family: 'Roboto Condensed', sans-serif !important;
+  font-family: var(--heading-font) !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
 }
 
-/* Protest banner effect */
 .activist-banner {
   background-color: var(--red);
   color: var(--white);
@@ -120,7 +210,6 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 
-/* Make headlines look like protest slogans */
 .slogan-text {
   background-color: var(--red);
   color: var(--white);
