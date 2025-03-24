@@ -1,50 +1,64 @@
 <div class="home-container">
-  <app-header 
+  <app-header
     (searchEvent)="handleSearch($event)"
-    (toggleCategoriesEvent)="toggleMobileSidebar()">
+    (toggleCategoriesEvent)="toggleMobileSidebar()"
+  >
   </app-header>
-  
+
   <!-- Mobile Toolbar - Now only for search -->
-  <div class="mobile-toolbar">    
+  <div class="mobile-toolbar">
     <div class="mobile-search">
-      <input 
-        type="text" 
-        [(ngModel)]="searchQuery" 
+      <input
+        type="text"
+        [(ngModel)]="searchQuery"
         placeholder="Arama yap..."
-        (input)="handleSearch(searchQuery)">
+        (input)="handleSearch(searchQuery)"
+      />
       <button (click)="handleSearch(searchQuery)">
         <mat-icon>search</mat-icon>
       </button>
     </div>
   </div>
-  
+
   <!-- Mobile Menu Backdrop - Only apply to main content -->
-  <div 
-    *ngIf="showMobileSidebar" 
+  <div
+    *ngIf="showMobileSidebar"
     class="mobile-backdrop"
-    (click)="toggleMobileSidebar()">
-  </div>
-  
+    (click)="toggleMobileSidebar()"
+  ></div>
+
   <div class="home-content">
     <div class="sidebar" [class.mobile-visible]="showMobileSidebar">
       <!-- Close button inside sidebar - only visible on mobile -->
-      <button *ngIf="isMobile && showMobileSidebar" class="close-sidebar-btn" (click)="toggleMobileSidebar()">
+      <button
+        *ngIf="isMobile && showMobileSidebar"
+        class="close-sidebar-btn"
+        (click)="toggleMobileSidebar()"
+      >
         <mat-icon>close</mat-icon>
       </button>
-      
-      <app-category-list 
+
+      <app-category-list
         [categories]="categories"
         [selectedCategoryId]="selectedCategoryId"
-        (categorySelected)="handleCategorySelected($event)">
+        (categorySelected)="handleCategorySelected($event, selectedGroupId)"
+      >
       </app-category-list>
+      <app-group-list
+        [groups]="groups"
+        [selectedGroupId]="selectedGroupId"
+        (groupSelected)="handleCategorySelected(selectedCategoryId, $event)"
+      >
+      </app-group-list>
     </div>
-    
+
     <div class="main-content">
       <app-boycott-list
         [boycottItems]="filteredItems"
         [categoryId]="selectedCategoryId"
-        [searchQuery]="searchQuery">
+        [searchQuery]="searchQuery"
+      >
       </app-boycott-list>
     </div>
   </div>
-</div> 
+</div>

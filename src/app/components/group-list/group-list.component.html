@@ -1,0 +1,32 @@
+<div class="category-container">
+  <h2 class="section-title retro-heading">Grup Şirketleri</h2>
+
+  <div class="filter-actions">
+    <button
+      class="clear-filter-btn"
+      (click)="clearFilter()"
+      [class.hidden]="!selectedGroupId">
+      <mat-icon>close</mat-icon>
+      Filtreyi Temizle
+    </button>
+  </div>
+
+  <div class="categories-grid">
+    <mat-card
+      *ngFor="let group of groups"
+      class="category-card retro-card"
+      [class.retro-card-hover]="true"
+      [class.selected]="selectedGroupId === group.id"
+      (click)="selectGroup(group.id)">
+      <div class="retro-card-content">
+        <div class="retro-category-header">
+          <div class="retro-category-text">
+            <h3 class="retro-category-title">{{group.name}}</h3>
+            <p class="retro-category-subtitle">{{group.description}}</p>
+          </div>
+        </div>
+        <div class="retro-card-stripe"></div>
+      </div>
+    </mat-card>
+  </div>
+</div>
