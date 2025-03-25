@@ -18,4 +18,12 @@ export interface BoycottItem {
   description: string;
   categoryId: string;
   logoUrl?: string;
-} 
+  groupId?: string;
+}
+
+export interface Group {
+  id: string;
+  name: string;
+  description: string;
+  logo?: string;
+}
