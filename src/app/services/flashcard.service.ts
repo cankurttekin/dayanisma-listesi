@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { BoycottItem, Category, Group } from '../models/flashcard.model';
 
 @Injectable({
@@ -66,6 +66,12 @@ export class BoycottService {
       name: 'DİJİTAL SERVİSLER',
       description: 'Dijital servisler ve platformlar',
       icon: 'computer',
+    },
+    {
+      id: '11',
+      name: 'Ünlüler ve Sanatçılar',
+      description: 'Ünlü kişiler ve sanatçılar',
+      icon: 'star',
     },
   ];
 
@@ -822,6 +828,480 @@ export class BoycottService {
         'Online iddaa ve bahis platformu (spor müsabakaları ve at yarışı bahis) - Demirören Holding',
       categoryId: '10',
     },
+
+    //#endregion Ünlüler
+    {
+      id: '124',
+      companyName: 'Abdulkadir Polat',
+      description:
+        'Instagram: abdulkadirpolatinsta, Youtube: @AbdulkadirPolat1\r\n',
+      categoryId: '11',
+    },
+    {
+      id: '125',
+      companyName: 'Acun Ilıcalı',
+      description: 'Instagram: acunilicali',
+      categoryId: '11',
+    },
+    {
+      id: '42',
+      companyName: 'Ali Biçim',
+      description: 'Instagram: alibicim, Twitter: alibicim, TikTok: alibicim',
+      categoryId: '11',
+    },
+    {
+      id: '43',
+      companyName: 'Asena Atalar',
+      description: 'Instagram: asenatalar, Twitter: , TikTok: asenatalar',
+      categoryId: '11',
+    },
+    {
+      id: '44',
+      companyName: 'Aslı Güler',
+      description: 'Instagram: asliguler, Twitter: , TikTok: asliguler',
+      categoryId: '11',
+    },
+    {
+      id: '45',
+      companyName: 'Atakan Özyurt',
+      description:
+        'Instagram: atakanozyurt, Twitter: atakannozyurt, TikTok: atakanozyurt',
+      categoryId: '11',
+    },
+    {
+      id: '46',
+      companyName: 'Aydilge',
+      description:
+        'Instagram: aydilgeonline, Twitter: Aydilge, TikTok: aydilgeonline',
+      categoryId: '11',
+    },
+    {
+      id: '47',
+      companyName: 'Ayhan Ak',
+      description: 'Instagram: ayhanak, Twitter: , TikTok: ayhanaak',
+      categoryId: '11',
+    },
+    {
+      id: '50',
+      companyName: 'Ayşegül Görer',
+      description:
+        'Instagram: ayysmakeup, Twitter: , TikTok: ayysmakeupp, 22.03.2025 - 3 reklam storysi',
+      categoryId: '11',
+    },
+    {
+      id: '51',
+      companyName: 'Barış BRA',
+      description: 'Instagram: barisbraa, Twitter: BARISBRA, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '52',
+      companyName: 'Barış Murat Yağcı',
+      description:
+        'Instagram: barismrtyagci, Twitter: barismrtyagci, TikTok: barismuratyagci, 22.03.2025 - 1 reklam story',
+      categoryId: '11',
+    },
+    {
+      id: '55',
+      companyName: 'Berika Demir',
+      description:
+        "Instagram: drberikademir, Twitter: , TikTok: , 4 Adet Reklam Story'si Atılmış",
+      categoryId: '11',
+    },
+    {
+      id: '56',
+      companyName: 'Berk Oral',
+      description: 'Instagram: berkorl, Twitter: Valesbatur, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '123',
+      companyName: 'Berna Yıldırım',
+      description: 'Instagram: bernnayll, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '57',
+      companyName: 'Beyza Öztürk',
+      description:
+        "Instagram: 1beyzakaram, Twitter: , TikTok: 1beyzakaram, 7 Reklam Story'si",
+      categoryId: '11',
+    },
+    {
+      id: '58',
+      companyName: 'Bilal Hancı',
+      description:
+        'Instagram: bilalhanci, Twitter: BilalHanci, TikTok: bilalhanci',
+      categoryId: '11',
+    },
+    {
+      id: '59',
+      companyName: 'Burak Özdemir',
+      description:
+        'Instagram: cznburak, Twitter: cznburak, TikTok: cznburak, 46 gündemden alakasız story',
+      categoryId: '11',
+    },
+    {
+      id: '60',
+      companyName: 'Burçe Yağmur Karabal',
+      description: 'Instagram: yagmurkrbll, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '126',
+      companyName: 'Buse Korkmaz',
+      description: 'Instagram: busekorkmaziniz',
+      categoryId: '11',
+    },
+    {
+      id: '67',
+      companyName: 'Çağla Kenanoğlu',
+      description:
+        'Instagram: caglakenanoglu, Twitter: , TikTok: zcaglakenanoglu',
+      categoryId: '11',
+    },
+    {
+      id: '68',
+      companyName: 'Çakal',
+      description: 'Instagram: cakal.95, Twitter: cakal_95, TikTok: 95cakal',
+      categoryId: '11',
+    },
+    {
+      id: '62',
+      companyName: 'Cem Özkök',
+      description:
+        'Instagram: cemozkook, Twitter: CemOzkoktr, TikTok: cemozkook, 22.03.2025 tarihinde 25 story gündemle alakasız ve 1 adet reklam storysi',
+      categoryId: '11',
+    },
+    {
+      id: '64',
+      companyName: 'Cihan Cavlak',
+      description: 'Instagram: mezarci_pubg, Twitter: , TikTok: mezarci_pubg',
+      categoryId: '11',
+    },
+    {
+      id: '65',
+      companyName: 'Cihan Şenso\u0308zlu\u0308',
+      description:
+        'Instagram: cihannaofficial, Twitter: Cihannaofficial, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '70',
+      companyName: 'Dilan Polat',
+      description:
+        "Instagram: dilanpolat, Twitter: dilannpolatt, TikTok: dilanpolat, 26 Reklam Story'si",
+      categoryId: '11',
+    },
+    {
+      id: '71',
+      companyName: 'Doğan Kabak',
+      description:
+        'Instagram: dogankabak, Twitter: dogan_kabak, TikTok: dogankabak',
+      categoryId: '11',
+    },
+    {
+      id: '72',
+      companyName: 'Doğuş Çobakçor',
+      description: 'Instagram: doguscabakcor, Twitter: doguscabakcor, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '73',
+      companyName: 'Ebo',
+      description:
+        'Instagram: ebo, Twitter: , TikTok: ebo, 22.03.2025 https://prnt.sc/LWXLs30c0a4J',
+      categoryId: '11',
+    },
+    {
+      id: '74',
+      companyName: 'Ece Ronay',
+      description:
+        'Instagram: eceronayofficial, Twitter: , TikTok: , https://prnt.sc/tYgTVgc_WpA7',
+      categoryId: '11',
+    },
+    {
+      id: '76',
+      companyName: 'Efe Gülser',
+      description: 'Instagram: iliskikocutr, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '78',
+      companyName: 'Emir Furkan Orhan',
+      description: 'Instagram: emirorhanz, Twitter: , TikTok: emirorhanzz',
+      categoryId: '11',
+    },
+    {
+      id: '79',
+      companyName: 'Emrecan Önal',
+      description: 'Instagram: emrecanonal, Twitter: , TikTok: emrecanonal',
+      categoryId: '11',
+    },
+    {
+      id: '81',
+      companyName: 'Erin Şengül',
+      description: 'Instagram: erinsengul, Twitter: , TikTok: erinsengul',
+      categoryId: '11',
+    },
+    {
+      id: '137',
+      companyName: 'Fatih Han',
+      description: 'Instagram: chef.fatihh',
+      categoryId: '11',
+    },
+    {
+      id: '82',
+      companyName: 'Fatih Yasin',
+      description:
+        'Instagram: fatihyasinim, Twitter: fatihyasinresmi, TikTok: fatihyasin',
+      categoryId: '11',
+    },
+    {
+      id: '142',
+      companyName: 'Furkan Bölükbaşı',
+      description: 'https://www.youtube.com/watch?v=nA1j8DD-Q6Y',
+      categoryId: '11',
+    },
+    {
+      id: '141',
+      companyName: 'Gizem Örge',
+      description: 'Instagram: gizemorge\r\n',
+      categoryId: '11',
+    },
+    {
+      id: '84',
+      companyName: 'Gökhan Ünver',
+      description:
+        'Instagram: gokhanunver, Twitter: gokhanunver, TikTok: gokhanunverben',
+      categoryId: '11',
+    },
+    {
+      id: '85',
+      companyName: 'Hakan Sama',
+      description:
+        'Instagram: mendeburlemur, Twitter: MendeburLemur, TikTok: mendeburlemur',
+      categoryId: '11',
+    },
+    {
+      id: '87',
+      companyName: 'Harun Yılmaz',
+      description: 'Instagram: 1453harunn, Twitter: , TikTok: 1453harunnn',
+      categoryId: '11',
+    },
+    {
+      id: '88',
+      companyName: 'Hasan Mustan',
+      description:
+        'Instagram: hasanmustan, Twitter: mustantsc, TikTok: mustanhasan',
+      categoryId: '11',
+    },
+    {
+      id: '136',
+      companyName: 'İbrahim Yılmaz',
+      description: 'Instagram: ibrahimyilmazofficial',
+      categoryId: '11',
+    },
+    {
+      id: '89',
+      companyName: 'İlayda Başak',
+      description: 'Instagram: ilaydabasaks, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '90',
+      companyName: 'Kaan Atıcı',
+      description: 'Instagram: elwind, Twitter: elwind, TikTok: elwind',
+      categoryId: '11',
+    },
+    {
+      id: '91',
+      companyName: 'Kadir Alkan',
+      description:
+        'Instagram: kadiralkanofficial, Twitter: kadiralkanresmi, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '92',
+      companyName: 'Kadir Ezildi',
+      description:
+        'Instagram: kadir_ezildi, Twitter: , TikTok: , 7 Adet Reklam Storysi',
+      categoryId: '11',
+    },
+    {
+      id: '135',
+      companyName: 'Karsu Dönmez',
+      description: 'Instagram: karsudonmez',
+      categoryId: '11',
+    },
+    {
+      id: '93',
+      companyName: 'Mehmet Oğuzhan Özyetiş',
+      description: 'Instagram: slmbnoguzhan, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '94',
+      companyName: 'Melih Abuaf',
+      description:
+        'Instagram: melihstagram, Twitter: mabuaf, TikTok: melihagbi',
+      categoryId: '11',
+    },
+    {
+      id: '95',
+      companyName: 'Melis Fis',
+      description: 'Instagram: melisfis, Twitter: MelisFis, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '96',
+      companyName: 'Mert Eren Bülbül',
+      description:
+        'Instagram: merterenbulbul1, Twitter: , TikTok: bulbulmerteren',
+      categoryId: '11',
+    },
+    {
+      id: '97',
+      companyName: 'Mertcan Bahar',
+      description: 'Instagram: mertcanbaharr, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '98',
+      companyName: 'Mervan Tepelioğlu',
+      description: 'Instagram: mervan, Twitter: MTepelioglu, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '100',
+      companyName: 'Mesut Can Tomay',
+      description: 'Instagram: mesutcantomay, Twitter: , TikTok: mesutcantomay',
+      categoryId: '11',
+    },
+    {
+      id: '121',
+      companyName: 'MR.THE CAN',
+      description: 'Instagram: mr.thecan, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '101',
+      companyName: 'Murat Soner',
+      description: 'Instagram: muratsoner, Twitter: muratsoner, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '102',
+      companyName: 'Narot Çetinkaya Pekküçükyan',
+      description: 'Instagram: narodcetinkaya, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '103',
+      companyName: 'Nevzat Özkur',
+      description: 'Instagram: nevzatozkur, Twitter: nevzatozkur0, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '104',
+      companyName: 'Norm Ender',
+      description: 'Instagram: normenderonline, Twitter: , TikTok: normender',
+      categoryId: '11',
+    },
+    {
+      id: '105',
+      companyName: 'Oğuz Mehmet Berberoğlu',
+      description: 'Instagram: mehmetberberoglu__, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '106',
+      companyName: 'Ömer Başdoğan',
+      description: 'Instagram: naletbebee, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '131',
+      companyName: 'Onur Dinç',
+      description: 'Instagram: khontkar',
+      categoryId: '11',
+    },
+    {
+      id: '108',
+      companyName: 'Özgür Deniz Cellat',
+      description: 'Instagram: cellatiniz, Twitter: , TikTok: cellat36',
+      categoryId: '11',
+    },
+    {
+      id: '109',
+      companyName: 'Özlem Ada Şahin',
+      description:
+        'Instagram: ozlemadasahin, Twitter: , TikTok: ozlemadaasahin',
+      categoryId: '11',
+    },
+    {
+      id: '122',
+      companyName: 'Özlem Altınok Öz',
+      description:
+        'Instagram: ozlemlinaoz, Twitter: , TikTok: , Saymaya üşendim çok reklam storysi',
+      categoryId: '11',
+    },
+    {
+      id: '112',
+      companyName: 'Samet Liçina',
+      description: 'Instagram: sametlicina, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '134',
+      companyName: 'Şamil Oymak',
+      description: 'Instagram: samiloymak',
+      categoryId: '11',
+    },
+    {
+      id: '113',
+      companyName: 'Selçuk Büyük',
+      description: 'Instagram: selcukbuyuk, Twitter: , TikTok: selcukbuyuk',
+      categoryId: '11',
+    },
+    {
+      id: '114',
+      companyName: 'Selen Kaldırım Özyurt',
+      description: 'Instagram: selenozyuurt, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '115',
+      companyName: 'Sibel Yüce Önügüren',
+      description:
+        "Instagram: sibelofficial50bahcemden, Twitter: , TikTok: bahcemdensaziye, 7 Reklam Story'si",
+      categoryId: '11',
+    },
+    {
+      id: '117',
+      companyName: 'Tuğba Öztermiyeci Bayburtluoğlu',
+      description: 'Instagram: makarna_lutfen_com, Twitter: , TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '118',
+      companyName: 'Ümit Tüney',
+      description: 'Instagram: umittuney1, Twitter: uemidi, TikTok: ',
+      categoryId: '11',
+    },
+    {
+      id: '119',
+      companyName: 'Zeynep Demirdan',
+      description: 'Instagram: demiirhaan, Twitter: , TikTok: demiirhaan',
+      categoryId: '11',
+    },
+    {
+      id: '120',
+      companyName: 'Zeynep Zor',
+      description: 'Instagram: zey_zor, Twitter: , TikTok: zey_zor',
+      categoryId: '11',
+    },
+    //#endregion
   ];
 
   constructor() {}
